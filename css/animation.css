@@ -271,17 +271,41 @@
 
 }
 
-/*============ Portfolio ============*/
+/*==============================
+PORTFOLIO ITEMS
+==============================*/
 
 .portfolio-item{
 
-    overflow:hidden;
+    opacity:1;
+
+    transform:translateY(0) scale(1);
+
+    transition:
+        opacity .35s ease,
+        transform .35s ease;
+
+}
+
+.portfolio-item.show{
+
+    opacity:1;
+
+    transform:translateY(0) scale(1);
+
+}
+
+.portfolio-item.hide{
+
+    opacity:0;
+
+    transform:translateY(20px) scale(.96);
 
 }
 
 .portfolio-item img{
 
-    transition:transform .6s ease;
+    transition:transform .5s ease;
 
 }
 
@@ -291,15 +315,15 @@
 
 }
 
-.overlay{
+.portfolio-overlay{
 
     opacity:0;
 
-    transition:.4s;
+    transition:opacity .3s ease;
 
 }
 
-.portfolio-item:hover .overlay{
+.portfolio-item:hover .portfolio-overlay{
 
     opacity:1;
 
@@ -614,5 +638,18 @@
         opacity:0;
 
     }
+
+}
+
+/*==============================
+VIEW TRANSITIONS
+==============================*/
+
+::view-transition-old(root),
+::view-transition-new(root){
+
+    animation-duration:.45s;
+
+    animation-timing-function:cubic-bezier(.22,1,.36,1);
 
 }
