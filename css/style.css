@@ -729,6 +729,7 @@ PORTFOLIO
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
     gap:30px;
+    view-transition-name:portfolio-grid;
 }
 
 .portfolio-item{
@@ -1038,25 +1039,14 @@ PORTFOLIO FILTER
 }
 
 /*==============================
-GRID
-===============================*/
-
-.portfolio-grid{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(320px,1fr));
-
-    gap:30px;
-
-}
-
-/*==============================
 ITEM
 ===============================*/
 
 .portfolio-item{
+
+    view-transition-name: auto;
+
+    contain:layout;
 
     position:relative;
 
@@ -1142,13 +1132,11 @@ ITEM
 ANIMATION
 ===============================*/
 
-.portfolio-item.hide{
+.portfolio-item.show{
 
-    opacity:0;
+    opacity:1;
 
-    transform:scale(.8);
-
-    pointer-events:none;
+    transform:none;
 
 }
 
