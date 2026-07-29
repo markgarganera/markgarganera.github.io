@@ -1,72 +1,57 @@
-/*==============================
+/*=========================================
 PORTFOLIO FILTER
-==============================*/
+=========================================*/
 
-const filterButtons = document.querySelectorAll(".filter-btn");
-const portfolioItems = document.querySelectorAll(".portfolio-item");
+const buttons = document.querySelectorAll(".filter-btn");
+const items = document.querySelectorAll(".portfolio-item");
 
-// Number of projects to show in the "All" view
-const previewLimit = {
-    development: 4,
-    design: 3,
-    graphics: 5
-};
+function animateShow(item, delay = 0) {
 
-// Show only the preview items for each category
-function showPreview() {
+    setTimeout(() => {
 
-    // Hide everything first
-    portfolioItems.forEach(item => {
-        item.classList.remove("show");
-        item.style.display = "none";
-    });
+        item.style.display = "block";
 
-    Object.keys(previewLimit).forEach(category => {
+        requestAnimationFrame(() => {
 
-        let count = 0;
+            item.classList.remove("hide");
 
-        document
-            .querySelectorAll(`.portfolio-item.${category}`)
-            .forEach(item => {
+            item.classList.add("show");
 
-                if (count < previewLimit[category]) {
+        });
 
-                    item.style.display = "block";
-
-                    setTimeout(() => {
-                        item.classList.add("show");
-                    }, 10);
-
-                    count++;
-
-                }
-
-            });
-
-    });
+    }, delay);
 
 }
 
-// Show every project in the selected category
-function showCategory(category) {
+function animateHide(item) {
 
-    portfolioItems.forEach(item => {
+    item.classList.remove("show");
 
-        if (item.classList.contains(category)) {
+    item.classList.add("hide");
 
-            item.style.display = "block";
+    setTimeout(() => {
 
-            setTimeout(() => {
-                item.classList.add("show");
-            }, 10);
+        item.style.display = "none";
+
+    }, 350);
+
+}
+
+function showPreview() {
+
+    let delay = 0;
+
+    items.forEach(item => {
+
+        if (item.classList.contains("preview-hidden")) {
+
+            animateHide(item);
 
         } else {
 
-            item.classList.remove("show");
+            animateShow(item, delay);
 
-            setTimeout(() => {
-                item.style.display = "none";
-            }, 300);
+            delay += 50;
 
         }
 
@@ -74,26 +59,61 @@ function showCategory(category) {
 
 }
 
-// Filter button events
-filterButtons.forEach(button => {
+function showCategory(category) {
+
+    let delay = 0;
+
+    items.forEach(item => {
+
+        if (item.classList.contains(category)) {
+
+            animateShow(item, delay);
+
+            delay += 50;
+
+        } else {
+
+            animateHide(item);
+
+        }
+
+    });
+
+}
+
+buttons.forEach(button => {
 
     button.addEventListener("click", () => {
 
         document
             .querySelector(".filter-btn.active")
-            .classList.remove("active");
+            ?.classList.remove("active");
 
         button.classList.add("active");
 
         const filter = button.dataset.filter;
 
-        if (filter === "all") {
+        const update = () => {
 
-            showPreview();
+            if (filter === "all") {
+
+                showPreview();
+
+            } else {
+
+                showCategory(filter);
+
+            }
+
+        };
+
+        if (document.startViewTransition) {
+
+            document.startViewTransition(update);
 
         } else {
 
-            showCategory(filter);
+            update();
 
         }
 
@@ -101,23 +121,22 @@ filterButtons.forEach(button => {
 
 });
 
-// Initial portfolio display
 showPreview();
 
-/*==============================
+/*=========================================
 LIGHTBOX
-==============================*/
+=========================================*/
 
-const lightbox = GLightbox({
+GLightbox({
 
-selector:'.glightbox',
+    selector: ".glightbox",
 
-touchNavigation:true,
+    touchNavigation: true,
 
-loop:true,
+    loop: true,
 
-zoomable:true,
+    zoomable: true,
 
-autoplayVideos:true
+    autoplayVideos: true
 
 });
