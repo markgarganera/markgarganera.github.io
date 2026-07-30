@@ -163,24 +163,17 @@ body::after{
 
     width:var(--sidebar-width);
 
-    height:100vh;
     height:100dvh;
 
     display:flex;
     flex-direction:column;
+    justify-content:space-between;
 
     background:rgba(17,24,39,.92);
-
     backdrop-filter:blur(20px);
-
     border-right:1px solid var(--border);
 
     padding:45px 30px;
-
-    overflow-y:auto;
-
-    scrollbar-width:none;          /* Firefox */
-    -ms-overflow-style:none;       /* IE */
 
     z-index:999;
 
@@ -284,8 +277,6 @@ body::after{
     align-items:center;
 
     gap:16px;
-
-    margin-top:auto;
 
     padding-top:20px;
 
@@ -1853,6 +1844,12 @@ MOBILE VIEWPORTS
 
     }
 
+  .sidebar nav{
+
+    flex:unset;
+
+  }
+
     .profile img{
         width:90px;
         height:90px;
@@ -1933,6 +1930,24 @@ VERY SHORT MOBILE DEVICES
         padding:7px 12px;
         font-size:13px;
     }
+
+    @media (max-width:768px) and (max-height:900px){
+
+    .sidebar nav{
+
+        margin-bottom:8px;
+
+    }
+
+    .sidebar-footer{
+
+        margin-top:8px;
+
+        padding-top:4px;
+
+    }
+
+}
 
     .sidebar-footer a{
         width:34px;
