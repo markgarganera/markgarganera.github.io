@@ -1686,9 +1686,13 @@ MOBILE
 
     .sidebar{
 
+    width:280px;
+
     padding:16px 20px;
 
-    width:280px;
+    display:flex;
+
+    flex-direction:column;
 
     }
 
@@ -1718,13 +1722,13 @@ MOBILE
 
 .sidebar nav{
 
-    margin-top:18px;
+    margin-top:16px;
 
     }
 
 .sidebar li{
 
-    margin:3px 0;
+    margin:2px 0;
 
     }
 
@@ -1738,9 +1742,9 @@ MOBILE
 
 .sidebar-footer{
 
-    margin-top:16px;
+    margin-top:20px;
 
-    padding-top:12px;
+    padding-top:0px;
 
     }
 
@@ -1782,7 +1786,7 @@ MOBILE
 
     .sidebar nav{
 
-        margin-top:12px;
+    margin-top:16px;
 
     }
 
@@ -1802,9 +1806,9 @@ MOBILE
 
     .sidebar-footer{
 
-        margin-top:10px;
+        margin-top:20px;
 
-        padding-top:8px;
+        padding-top:0px;
 
     }
 
