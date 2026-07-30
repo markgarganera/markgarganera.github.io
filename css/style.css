@@ -673,8 +673,19 @@ SKILLS
 .skill span{
     display:flex;
     justify-content:space-between;
+    align-items:center;
     margin-bottom:15px;
+    font-size:16px;
+}
+
+.skill span strong:first-child{
     font-weight:600;
+    color:#fff;
+}
+
+.skill span strong:last-child{
+    color:var(--primary-light);
+    font-weight:700;
 }
 
 .progress{
@@ -685,15 +696,16 @@ SKILLS
     overflow:hidden;
 }
 
-.progress div{
+.progress-bar{
     height:100%;
+    width:0;
     border-radius:20px;
     background:linear-gradient(
         90deg,
         var(--primary),
         var(--primary-light)
     );
-    width:0;
+    transition:width 1.8s ease;
 }
 
 /*======================================
