@@ -1913,7 +1913,7 @@ MOBILE VIEWPORTS
 /*======================================
 VERY SHORT MOBILE DEVICES
 ======================================*/
-@media (max-width:768px) and (max-height:720px) {
+@media (max-width:768px) and (max-height:900px) {
 
     .profile img{
         width:72px;
