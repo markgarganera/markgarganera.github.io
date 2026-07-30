@@ -398,15 +398,11 @@ body::after{
 
     font-weight:600;
 
-    line-height:1.4;
+    line-height:1.2;
 
-    min-height:2.8em;   /* Prevents the height from changing */
+    min-height:2em;
 
-    display:flex;
-
-    align-items:center;
-
-    margin-bottom:30px;
+    margin:0 0 30px;
 
 }
 
