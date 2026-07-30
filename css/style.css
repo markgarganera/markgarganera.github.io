@@ -1800,11 +1800,11 @@ COMPACT DESKTOP / LAPTOPS
     }
 
     .sidebar nav{
-        margin-top:28px;
+        margin-top:10px;
     }
 
     .sidebar li{
-        margin:6px 0;
+        margin:1px 0;
     }
 
     .sidebar a{
@@ -1869,11 +1869,11 @@ MOBILE VIEWPORTS
     }
 
     .sidebar nav{
-        margin-top:16px;
+        margin-top:10px;
     }
 
     .sidebar li{
-        margin:2px 0;
+        margin:1px 0;
     }
 
     .sidebar a{
@@ -1891,9 +1891,9 @@ MOBILE VIEWPORTS
 
         gap:12px;
 
-        margin-top:auto;
+        margin-top:clamp(8px, 2vh, 18px);
 
-        padding-top:15px;
+        padding-top:8px;
 
     }
 
