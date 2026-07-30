@@ -1688,11 +1688,17 @@ MOBILE
 
     width:280px;
 
+    height:100dvh;
+
     padding:16px 20px;
 
     display:flex;
 
     flex-direction:column;
+
+    justify-content:flex-start;
+
+    gap:12px;
 
     }
 
@@ -1720,12 +1726,6 @@ MOBILE
 
     }
 
-.sidebar nav{
-
-    margin-top:16px;
-
-    }
-
 .sidebar li{
 
     margin:2px 0;
@@ -1741,8 +1741,6 @@ MOBILE
     }
 
 .sidebar-footer{
-
-    margin-top:20px;
 
     padding-top:0px;
 
@@ -1784,12 +1782,6 @@ MOBILE
 
     }
 
-    .sidebar nav{
-
-    margin-top:16px;
-
-    }
-
     .sidebar li{
 
         margin:2px 0;
@@ -1805,8 +1797,6 @@ MOBILE
     }
 
     .sidebar-footer{
-
-        margin-top:20px;
 
         padding-top:0px;
 
