@@ -277,6 +277,14 @@ body::after{
 
 .sidebar-footer{
 
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:16px;
+
     margin-top:auto;
 
     padding-top:20px;
@@ -1745,19 +1753,27 @@ MOBILE
 
 .sidebar-footer{
 
-    margin-top:auto;
+        display:flex;
 
-    padding-top:20px;
+        justify-content:center;
 
-}
+        align-items:center;
+
+        gap:12px;
+
+        margin-top:auto;
+
+        padding-top:15px;
+
+    }
 
 .sidebar-footer a{
 
-    width:36px;
+        width:36px;
 
-    height:36px;
+        height:36px;
 
-    font-size:15px;
+        font-size:15px;
 
     }
 
