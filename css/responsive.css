@@ -476,7 +476,6 @@ FINAL MOBILE HORIZONTAL SCROLL FIX
         overflow-x: hidden !important;
     }
 
-
     /* Prevent sections extending outside viewport */
     section,
     .section,
@@ -487,13 +486,11 @@ FINAL MOBILE HORIZONTAL SCROLL FIX
         overflow-x: hidden;
     }
 
-
     /* Fix decorative background elements */
     .section::before,
     .section::after {
         display: none;
     }
-
 
     /* Fix portfolio cards */
     .portfolio-grid {
@@ -501,25 +498,21 @@ FINAL MOBILE HORIZONTAL SCROLL FIX
         width: 100%;
     }
 
-
     /* Fix timeline overflow */
     .timeline {
         width: 100%;
     }
-
 
     .timeline-item {
         width:100%;
         max-width:100%;
     }
 
-
     /* Prevent buttons causing overflow */
     .btn,
     button {
         max-width:100%;
     }
-
 
     /* Hide back-to-top on small phones */
     #backToTop {
