@@ -1630,3 +1630,18 @@ ABOUT BUTTONS
     font-size:15px;
 
 }
+
+/*======================================
+MOBILE
+======================================*/
+@media (max-width: 768px) {
+
+    .typing-text {
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
