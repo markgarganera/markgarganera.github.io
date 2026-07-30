@@ -245,6 +245,20 @@ body::after{
 
 }
 
+.profile-link{
+
+    background:transparent !important;
+
+}
+
+.profile-link:hover{
+
+    background:transparent !important;
+
+    transform:translateX(6px);
+
+}
+
 .profile img{
 
     width:170px;
