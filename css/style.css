@@ -1775,73 +1775,113 @@ ABOUT BUTTONS
 /*======================================
 MOBILE
 ======================================*/
-@media (max-width: 768px) {
+/*======================================
+COMPACT DESKTOP / LAPTOPS
+======================================*/
+@media (max-height: 982px) {
 
-    .typing-text {
-        justify-content: center;
-        text-align: center;
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
+    .sidebar{
+        padding:30px 24px;
+    }
+
+    .profile img{
+        width:145px;
+        height:145px;
+    }
+
+    .profile h2{
+        margin-top:16px;
+        font-size:26px;
+    }
+
+    .profile p{
+        margin-top:4px;
+        font-size:15px;
+    }
+
+    .sidebar nav{
+        margin-top:28px;
+    }
+
+    .sidebar li{
+        margin:6px 0;
+    }
+
+    .sidebar a{
+        padding:11px 16px;
+        font-size:15px;
+    }
+
+    .sidebar-footer{
+        gap:14px;
+    }
+
+    .sidebar-footer a{
+        width:42px;
+        height:42px;
+        font-size:17px;
+    }
+
+}
+
+
+/*======================================
+MOBILE VIEWPORTS
+======================================*/
+@media (max-width:768px) {
+
+    .typing-text{
+        text-align:center;
+        width:100%;
+        margin:0 auto;
     }
 
     .sidebar{
 
-    width:280px;
+        width:280px;
 
-    height:100dvh;
+        height:100dvh;
+        height:100vh;
 
-    padding:16px 20px;
+        padding:16px 20px;
 
-    display:flex;
+        display:flex;
+        flex-direction:column;
+        justify-content:flex-start;
 
-    flex-direction:column;
-
-    justify-content:flex-start;
-
-    gap:12px;
-
-    }
-
-.profile img{
-
-    width:90px;
-
-    height:90px;
+        gap:12px;
 
     }
 
-.profile h2{
-
-    margin-top:10px;
-
-    font-size:20px;
-
+    .profile img{
+        width:90px;
+        height:90px;
     }
 
-.profile p{
-
-    margin-top:2px;
-
-    font-size:13px;
-
+    .profile h2{
+        margin-top:10px;
+        font-size:20px;
     }
 
-.sidebar li{
-
-    margin:2px 0;
-
+    .profile p{
+        margin-top:2px;
+        font-size:13px;
     }
 
-.sidebar a{
-
-    padding:8px 14px;
-
-    font-size:14px;
-
+    .sidebar nav{
+        margin-top:16px;
     }
 
-.sidebar-footer{
+    .sidebar li{
+        margin:2px 0;
+    }
+
+    .sidebar a{
+        padding:8px 14px;
+        font-size:14px;
+    }
+
+    .sidebar-footer{
 
         display:flex;
 
@@ -1857,72 +1897,47 @@ MOBILE
 
     }
 
-.sidebar-footer a{
-
+    .sidebar-footer a{
         width:36px;
-
         height:36px;
-
         font-size:15px;
+    }
 
+    .main-content{
+        margin-left:0;
     }
 
 }
 
-@media (max-width:768px) and (max-height:720px){
+
+/*======================================
+VERY SHORT MOBILE DEVICES
+======================================*/
+@media (max-width:768px) and (max-height:720px) {
 
     .profile img{
-
         width:72px;
-
         height:72px;
-
     }
 
     .profile h2{
-
         font-size:18px;
-
         margin-top:8px;
-
     }
 
     .profile p{
-
         display:none;
-
-    }
-
-    .sidebar li{
-
-        margin:2px 0;
-
     }
 
     .sidebar a{
-
         padding:7px 12px;
-
         font-size:13px;
-
-    }
-
-    .sidebar-footer{
-
-    margin-top:auto;
-
-    padding-top:20px;
-
     }
 
     .sidebar-footer a{
-
         width:34px;
-
         height:34px;
-
         font-size:14px;
-
     }
 
 }
