@@ -408,3 +408,61 @@ counters.forEach(counter => {
     counterObserver.observe(counter);
 
 });
+
+
+/*=========================================
+    Animated Skill Progress Bar
+=========================================*/
+
+const skillsSection = document.querySelector("#skills");
+const progressBars = document.querySelectorAll(".progress-bar");
+const percentages = document.querySelectorAll(".skill-percent");
+
+let skillsAnimated = false;
+
+const animateSkills = () => {
+
+    if (skillsAnimated) return;
+
+    const top = skillsSection.getBoundingClientRect().top;
+
+    if (top < window.innerHeight - 100) {
+
+        skillsAnimated = true;
+
+        progressBars.forEach(bar => {
+
+            const target = parseInt(bar.dataset.width);
+
+            bar.style.width = target + "%";
+
+        });
+
+        percentages.forEach(counter => {
+
+            const target = parseInt(counter.dataset.percent);
+
+            let current = 0;
+
+            const timer = setInterval(() => {
+
+                current++;
+
+                counter.textContent = current + "%";
+
+                if (current >= target) {
+
+                    clearInterval(timer);
+
+                }
+
+            }, 1800 / target);
+
+        });
+
+    }
+
+};
+
+window.addEventListener("scroll", animateSkills);
+animateSkills();
